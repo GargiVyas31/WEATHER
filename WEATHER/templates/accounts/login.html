@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Add icon library -->
+
+
+</head>
+<body>
+<h2>Login Form</h2>
+<form  style="max-width:500px;margin:auto" method = "post"  action="{% url 'accounts:login' %}" >
+    {% csrf_token %}
+    {{ form.as_p }}
+
+
+  <button type="submit" class="btn">Login</button>
+</form>
+
+</body>
+</html>

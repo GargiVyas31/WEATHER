@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Temperature Graph</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="weather_app/style.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>TEMPERATURE GRAPH</h1>
+        <div width="200" height="200">
+    <canvas id="myChart" width="200" height="200"></canvas>
+    </div>
+        </div>
+
+    <script >
+        // Our labels along the x-axis
+var years = [1,2,3,4,5,6,7,8];
+// For drawing the lines
+var content ={{data}};
+
+var ctx = document.getElementById("myChart");
+var myChart = new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: years,
+    datasets: [
+
+        {
+            data : content,
+            label: "Temperature",
+            borderColor: "#3e95cd",
+            fill: false
+        }
+    ]
+  }
+});
+
+    </script>
+  </body>
+</html>
